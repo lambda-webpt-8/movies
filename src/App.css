@@ -2,6 +2,31 @@
   text-align: center;
 }
 
+.App::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  background: black;
+  z-index: 1000;
+  /* animation: curtainLeft 2s ease-in; */
+  animation: curtainLeft 2s ease-out 1 normal forwards;
+}
+
+.App::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  background: black;
+  z-index: 1000;
+  animation: curtainRight 2s ease-out 1 normal forwards;
+}
+
 .App-logo {
   animation: App-logo-grow infinite 5s alternate;
   height: 40vmin;
@@ -38,5 +63,49 @@
   }
   to {
     transform: scale(.7) rotate(360deg);
+  }
+}
+
+@keyframes curtainLeft {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+    transform: translateX(0);
+    display: block;
+  }
+  50% {
+    clip-path: polygon(0 0, 90% 0, 65% 100%, 0 100%);
+    opacity: .6;
+    transform: translateX(-80%);
+    display: block;
+  }
+  100% {
+    clip-path: polygon(0 0, 40% 0, 15% 100%, 0 100%);
+    opacity: 0;
+    transform: translateX(-100%);
+    display: none;
+  }
+}
+
+@keyframes curtainRight {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+    transform: translateX(0);
+    display: block;
+  }
+
+  50% {
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 35% 100%);
+    opacity: .6;
+    transform: translateX(80%);
+    display: block;
+  }
+
+  100% {
+    clip-path: polygon(60% 0, 100% 0, 100% 100%, 85% 100%);
+    opacity: 0;
+    transform: translateX(100%);
+    display: none;
   }
 }
