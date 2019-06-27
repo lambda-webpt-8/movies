@@ -1,3 +1,10 @@
+######## Getting Started #########
+
+  1. Clone Repo
+  2. cd into project folder and type `git checkout -b <firstname>-<lastname>` to create your own branch
+  3. Type `npm install` to install all dependencies.
+  4. To run development mode, type `npm start`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
