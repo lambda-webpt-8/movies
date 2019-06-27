@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-grow infinite 5s alternate;
   height: 40vmin;
   pointer-events: none;
 }
@@ -29,5 +29,14 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-grow {
+  from {
+    transform: scale(1.6) rotate(0deg);
+  }
+  to {
+    transform: scale(.7) rotate(360deg);
   }
 }
