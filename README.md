@@ -4,7 +4,23 @@
   2. cd into project folder and type `git checkout -b <firstname>-<lastname>` to create your own branch
   3. Type `npm install` to install all dependencies.
   4. To run development mode, type `npm start`
+  5. api keys
+  
+  ## Adding API Keys
 
+#The app uses react-google-maps and foursquare apis.#
+Easy set-up:
+- create a .env file in the root directory.
+- Use the following names in the .env for your keys. 
+- REACT_APP_ID=your_4_square_id
+- REACT_APP_SECRET=your_4_square_secret
+- REACT_APP_MAP_KEY=your_g_map_key
+- The create-react-app tool uses REACT_APP_ to identify these variables. If you don't start your API key name with it, create-react-app won't see it.
+
+Get your Foursquare api keys here [Foursquare](https://developer.foursquare.com/places-api).
+Get an API Key | Maps JavaScript API | [Google Developers](https://developers.google.com/maps/documentation/javascript/get-api-key).
+  
+  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
