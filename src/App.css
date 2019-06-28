@@ -1,0 +1,425 @@
+* {
+     box-sizing: border-box;
+     letter-spacing: 1px;
+}
+
+.App {
+     text-align: center;
+     height: 100vh;
+     width: 100vw;
+     display: flex;
+     flex-direction: column;
+     font-size: 18px;
+}
+
+p {
+     margin: 0;
+}
+
+.main {
+     display: flex;
+     flex-direction: column-reverse;
+}
+
+.image-container {
+     height: 30vh;
+     width: 100vw;
+     background-image: url('https://images.pexels.com/photos/1267684/pexels-photo-1267684.jpeg?auto=compress&cs=tinysrgb&h=650&w=940');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+}
+
+.hero-container{
+     background-color: rgb(211, 153, 5);
+     padding: .5rem;
+}
+
+.screen .logo {
+     margin: 0;
+     width: 50vw;
+     max-width: 250px;
+}
+
+.screen p {
+     color: #fff;
+     font-size: 1.2rem;
+     letter-spacing: 1.25px;
+}
+
+.map-container {
+     width: 100vw;
+     /* height: 25vh; */
+     z-index: 0;
+}
+
+.map-container-brewery {
+     height: 25vh;
+     width: 100vw;
+}
+
+.loading-element,
+.map-element {
+     height: 100%;
+}
+
+div.infoBox {
+     background: #fff;
+     margin-left: -33vw;
+     left: 0 !important;
+     width: 66%;
+     max-width: 300px;
+     border-radius: 3px;
+     box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.5);
+}
+
+.info-container {
+     display: flex;
+     flex-direction: row;
+     background: #fff;
+}
+
+.info-div {
+     display: flex;
+     flex-direction: column;
+     background: #fff;
+     font-size: 1rem;
+     margin: 0 auto;
+     text-align: center;
+}
+
+.info-image {
+     margin-right: 15px;
+     height: 100%;
+     width: auto;
+}
+
+.info-name {
+     letter-spacing: 1.2px;
+     text-transform: capitalize;
+     color: chocolate;
+     font-weight: bolder;
+}
+
+.view-details-container {
+     /* display: flex; */
+     width: 100%;
+     height: 40%;
+}
+
+.info-url {
+     border: 1px solid goldenrod;
+     color: #fff;
+     background: chocolate;
+     box-shadow: 3px 3px 13px rgba(143, 60, 13, 0.5);
+     font-size: .75rem;
+     padding: .25rem .65rem;
+     text-decoration: none;
+     transition: 0.3s;
+}
+
+.info-url:hover {
+     background: brown;
+}
+
+.sidebar {
+     /* margin-top: 1.75rem;  */
+     display: flex;
+     flex-direction: column;
+     max-height: 100vh;
+     width: 100vw;
+     overflow: scroll;
+     background: #fff;
+}
+
+#search {
+     font-size: 2vh;
+     padding: 1rem;
+     border-radius: 3px;
+     background: #fff;
+     position: absolute;
+     /* top: 55vh; */
+     /* left: 7.5vw; */
+     /* align-content: center; */
+     /* margin-top: 18vh; */
+     /* margin-left: auto; */
+     /* margin-right: auto; */
+     /* z-index: 1000; */
+     /* width: 85vw; */
+     width: 100%;
+     height: 1.75rem;
+     letter-spacing: 2px;
+     text-transform: capitalize;
+}
+
+.venuList {
+     background: #f6f6f6;
+     margin: 0;
+     padding: .5rem;
+     padding-top: 2.75rem;
+     list-style: none;
+}
+
+.list-item {
+     font-size: 1rem;
+     border-radius: 5px;
+     box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.5);
+     margin-bottom: 1rem;
+     cursor: pointer;
+     display: flex;
+     flex-direction: column;
+}
+
+.list-item a {
+     text-decoration: none;
+}
+
+.list-item a:hover {
+     box-shadow: 3px 3px 13px rgba(128, 128, 0, 0.7);
+}
+
+.details li {
+     color: #666;
+     margin: 0;
+     display: flex;
+     flex-direction: row;
+     background: #fff;
+}
+
+.details-photo {
+     width: 100px;
+     height: 100px;
+}
+
+.details-details {
+     margin-left: 5px;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     text-align: left;
+}
+
+.details-name {
+     font-size: 2.333vh;
+     width: 100%;
+     letter-spacing: 1.3px;
+     text-transform: capitalize;
+     color: chocolate;
+     font-weight: bolder;
+}
+
+.details-address {
+     font-size: 2vh;
+     color: #666;
+}
+
+.rating {
+     display: flex;
+     flex-direction: row;
+}
+
+.rating .star {
+     color: #ffc107;
+     font-size: 2vh;
+}
+
+.App-logo {
+     animation: App-logo-spin infinite 20s linear;
+     height: 40vmin;
+}
+
+.App-header {
+     background-color: #282c34;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     font-size: calc(10px + 2vmin);
+     color: white;
+}
+
+.App-link {
+     color: #61dafb;
+}
+
+/* // /brewery */
+
+.nav {
+     padding: 10px;
+     font-size: 17px;
+     text-align: left;
+     /* display: block; */
+     background: #eee;
+     width: 100%;
+}
+
+.nav a {
+     text-decoration: none;
+     color: chocolate;
+}
+
+.hero {
+     width: 100vw;
+     height: 33vh;
+     overflow: hidden;
+     z-index: -100;
+}
+
+.hero img {
+     width: 100%;
+}
+
+.hero-text {
+     text-transform: uppercase;
+     font-weight: bold;
+     letter-spacing: .75rem;
+     color: #fff;
+     position: absolute;
+     width: 100%;
+}
+
+.open {
+     position: relative;
+     font-size: 14px;
+     letter-spacing: 2px;
+     color: #fff;
+     background-color: rgba(0, 128, 0, .3);
+     padding: 3px 0;
+     text-transform: uppercase;
+     margin-top: -24px;
+     z-index: 1000;
+}
+
+.closed {
+     position: relative;
+     font-size: 14px;
+     letter-spacing: 2px;
+     color: #fff;
+     background-color: rgba(128, 0, 0, .3);
+     padding: 3px 0;
+     text-transform: uppercase;
+     margin-top: -24px;
+     z-index: 1000;
+}
+
+.address {
+     padding: 20px 10px;
+     color: #666;
+     font-size: 14px;
+}
+
+.description {
+     padding: 0 10px;
+     letter-spacing: 1px;
+}
+
+.disqus_thread {
+     width: 90%;
+     padding: 1em;
+}
+
+@keyframes App-logo-spin {
+     from {
+          transform: rotate(0deg);
+     }
+     to {
+          transform: rotate(360deg);
+     }
+}
+
+@media screen and (min-width: 767px) {
+     .App {
+          /* flex-direction: column !important; */
+     }
+     .main {
+          flex-direction: row;
+     }
+     .screen .logo {
+          margin: 0;
+          width: 60vw;
+          max-width: 350px;
+     }
+     .sidebar {
+          max-height: calc(100vh);
+          width: 35vw;
+          overflow: scroll;
+     }
+     .map-container {
+          height: 100vh;
+          width: 65vw;
+     }
+     .map-container-brewery {
+          height: 100vh;
+          width: 100vw;
+     }
+}
+
+/* @media screen and (min-width: 800px) { */
+
+/* 
+    
+     .details-address{
+          font-size: 12px;
+          letter-spacing: 1px;
+     }
+     
+     
+     
+     .details {
+          /* padding: .25rem; */
+
+/* } */
+
+/* } */
+
+/*
+@media screen and (max-width: 500px) {
+     .hero{
+          /* flex-direction: column; */
+
+/* } */
+
+/* }       */
+
+/*
+@media screen and (max-width: 400px) {
+     div.infoBox {
+          background: #fff;
+          margin-left: -33vw;
+          left: 0 !important;
+          height: auto;
+          width: 66%;
+          border-radius: 3px;
+          box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.5);
+     }
+     .info-container {
+          display: flex;
+          flex-direction: row;
+          background: #fff;
+     }
+     .info-div {
+          display: flex;
+          flex-direction: column;
+          background: #fff;
+          font-size: .60rem;
+          margin: 0 auto;
+          text-align: center;
+     }
+     .info-image {
+          height: 80px;
+          width: auto;
+     }
+     .info-name {
+          letter-spacing: 1px;
+          text-transform: capitalize;
+          color: chocolate;
+          font-weight: bold;
+     }
+     .info-url {
+          padding: .333rem .666rem;
+          text-decoration: none;
+     }
+}
+*/
