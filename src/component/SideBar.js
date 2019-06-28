@@ -64,7 +64,7 @@ export default class SideBar extends Component {
       <input 
         type={'search'}
         id={'search'} 
-        placeholder={'Breweries & Locations'}
+        placeholder={'search near you'}
         onChange={this.handleChange}
         aria-labelledby={'search'}
         tabIndex={0}
